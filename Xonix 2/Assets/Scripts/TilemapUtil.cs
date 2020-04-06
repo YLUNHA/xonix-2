@@ -6,6 +6,9 @@ using UnityEngine.Tilemaps;
 
 public class TilemapUtil : MonoBehaviour
 {
+    public SoundController soundController;
+
+    [Space]
     public Tilemap groundTilemap;
     public Tilemap waterTilemap;
     public Tilemap playerTrackTilemap;
@@ -110,6 +113,7 @@ public class TilemapUtil : MonoBehaviour
             // That means it is ground
             else if (playerTrackList.Count > 0)
             {
+                soundController.CutWater();
                 CutSelectedWaterArea();
                 CalcLevelProgress();
             }

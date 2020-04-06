@@ -8,11 +8,7 @@ public class GameController : MonoBehaviour
 {
     public static bool isPause;
 
-    [Space]
-    public AudioSource audioSource;
-    public AudioClip[] audioClips;
-    public AudioClip gameOverClip;
-    public AudioClip winningClip;
+    public SoundController soundController;
 
     [Space]
     public PlayerMovement playerMovement;
@@ -49,13 +45,6 @@ public class GameController : MonoBehaviour
 
     private void Initial()
     {
-        if (audioClips != null && audioClips.Length > 0)
-        {
-            PlayMusic(audioClips[UnityEngine.Random.Range(0, audioClips.Length)]);
-        }
-
-        // ---
-
         waterEnemiesCount = 0;
         groundEnemiesCount = 0;
         levelTimer = 60;
@@ -100,12 +89,11 @@ public class GameController : MonoBehaviour
     {
         PauseGame(true);
         LevelUI.ShowLevelComplete();
-        PlayMusic(winningClip, false);
+        soundController.LevelComplete();
     }
 
     public void LoadNextLevel()
     {
-        StopMusic();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
@@ -113,7 +101,7 @@ public class GameController : MonoBehaviour
     {
         PauseGame(true);
         LevelUI.ShowGameOver();
-        PlayMusic(gameOverClip, false);
+        soundController.GameOver();
     }
 
     public void CloseLevel()
@@ -121,26 +109,13 @@ public class GameController : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-
-    private void PlayMusic(AudioClip clip, bool loop = true)
-    {
-        audioSource.clip = clip;
-        audioSource.loop = loop;
-        audioSource.Play();
-    }
-
-    private void StopMusic()
-    {
-        audioSource.Stop();
-    }
-
-
     private void DecrementPlayerLife()
     {
         if (playerLife > 0)
         {
             playerLife--;
             LevelUI.i.HideHeart(playerLife);
+            soundController.PlayerDead();
         }
 
         if (playerLife > 0)
