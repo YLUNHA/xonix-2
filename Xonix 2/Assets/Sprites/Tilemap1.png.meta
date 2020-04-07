@@ -517,19 +517,19 @@ TextureImporter:
     second: roguelikeSheet_transparent_170
   - first:
       213: -118652435597658457
-    second: roguelikeSheet_transparent_171
+    second: water_9
   - first:
       213: -3233126097371405724
-    second: roguelikeSheet_transparent_172
+    second: water_10
   - first:
       213: -6932605525768524701
-    second: roguelikeSheet_transparent_173
+    second: water_1
   - first:
       213: -4801228892791939112
-    second: roguelikeSheet_transparent_174
+    second: water_2
   - first:
       213: -585769342167353144
-    second: roguelikeSheet_transparent_175
+    second: water_3
   - first:
       213: -6903994290514275460
     second: roguelikeSheet_transparent_176
@@ -688,19 +688,19 @@ TextureImporter:
     second: roguelikeSheet_transparent_227
   - first:
       213: 6917309324766634363
-    second: roguelikeSheet_transparent_228
+    second: water_12
   - first:
       213: 4060985102457668633
-    second: roguelikeSheet_transparent_229
+    second: water_11
   - first:
       213: -2805055284131462197
-    second: roguelikeSheet_transparent_230
+    second: water_8
   - first:
       213: 8701995285853803940
-    second: roguelikeSheet_transparent_231
+    second: water_0
   - first:
       213: 4473535436856755601
-    second: roguelikeSheet_transparent_232
+    second: water_4
   - first:
       213: -1142283425688887490
     second: roguelikeSheet_transparent_233
@@ -853,13 +853,13 @@ TextureImporter:
     second: roguelikeSheet_transparent_282
   - first:
       213: 6358212029926575312
-    second: roguelikeSheet_transparent_283
+    second: water_7
   - first:
       213: 6530549038418137130
-    second: roguelikeSheet_transparent_284
+    second: water_6
   - first:
       213: -7991330723829222816
-    second: roguelikeSheet_transparent_285
+    second: water_5
   - first:
       213: 6640137418908027124
     second: roguelikeSheet_transparent_286
@@ -3952,7 +3952,7 @@ TextureImporter:
     second: roguelikeSheet_transparent_1315
   - first:
       213: -3426299838319634193
-    second: roguelikeSheet_transparent_1316
+    second: w_pt
   - first:
       213: 8315830466307934652
     second: roguelikeSheet_transparent_1317
@@ -8801,7 +8801,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeSheet_transparent_171
+      name: water_9
       rect:
         serializedVersion: 2
         x: 0
@@ -8822,7 +8822,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeSheet_transparent_172
+      name: water_10
       rect:
         serializedVersion: 2
         x: 17
@@ -8843,7 +8843,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeSheet_transparent_173
+      name: water_1
       rect:
         serializedVersion: 2
         x: 34
@@ -8864,7 +8864,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeSheet_transparent_174
+      name: water_2
       rect:
         serializedVersion: 2
         x: 51
@@ -8885,7 +8885,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeSheet_transparent_175
+      name: water_3
       rect:
         serializedVersion: 2
         x: 68
@@ -9998,7 +9998,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeSheet_transparent_228
+      name: water_12
       rect:
         serializedVersion: 2
         x: 0
@@ -10019,7 +10019,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeSheet_transparent_229
+      name: water_11
       rect:
         serializedVersion: 2
         x: 17
@@ -10040,7 +10040,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeSheet_transparent_230
+      name: water_8
       rect:
         serializedVersion: 2
         x: 34
@@ -10061,7 +10061,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeSheet_transparent_231
+      name: water_0
       rect:
         serializedVersion: 2
         x: 51
@@ -10082,7 +10082,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeSheet_transparent_232
+      name: water_4
       rect:
         serializedVersion: 2
         x: 68
@@ -11153,7 +11153,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeSheet_transparent_283
+      name: water_7
       rect:
         serializedVersion: 2
         x: 34
@@ -11174,7 +11174,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeSheet_transparent_284
+      name: water_6
       rect:
         serializedVersion: 2
         x: 51
@@ -11195,7 +11195,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeSheet_transparent_285
+      name: water_5
       rect:
         serializedVersion: 2
         x: 68
@@ -32846,7 +32846,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roguelikeSheet_transparent_1316
+      name: w_pt
       rect:
         serializedVersion: 2
         x: 714

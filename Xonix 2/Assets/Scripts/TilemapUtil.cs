@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
@@ -12,30 +11,7 @@ public class TilemapUtil : MonoBehaviour
     public Tilemap groundTilemap;
     public Tilemap waterTilemap;
     public Tilemap playerTrackTilemap;
-
-    public Tile playerTrackTile;
-
-    [Header("Water tiles")]
-    public Tile waterTile;
-
-    [Space]
-    public Tile waterUpTile;
-    public Tile waterDownTile;
-
-    [Space]
-    public Tile waterLeftTile;
-    public Tile waterLeftUpTile;
-    public Tile waterLeftDownTile;
-    public Tile waterOutLeftUpTile;
-    public Tile waterOutLeftDownTile;
-
-    [Space]
-    public Tile waterRightTile;
-    public Tile waterRightUpTile;
-    public Tile waterRightDownTile;
-    public Tile waterOutRightUpTile;
-    public Tile waterOutRightDownTile;
-
+    public TileSet tileSet;
 
     private int waterCount = 0;
     private int waterCountOrigin;
@@ -107,7 +83,7 @@ public class TilemapUtil : MonoBehaviour
             // If it's water - set player track.
             if (hasWaterTile)
             {
-                playerTrackTilemap.SetTile(intPosition, playerTrackTile);
+                playerTrackTilemap.SetTile(intPosition, tileSet.playerTrack);
                 playerTrackList.Add(intPosition);
             }
             // That means it is ground
@@ -336,31 +312,31 @@ public class TilemapUtil : MonoBehaviour
         switch (direction)
         {
             case MovementDirection.Up:
-                return waterDownTile;
+                return tileSet.waterDown;
 
             case MovementDirection.Down:
-                return waterUpTile;
+                return tileSet.waterUp;
 
             case MovementDirection.Left:
-                return waterRightTile;
+                return tileSet.waterRight;
 
             case MovementDirection.LeftUp:
-                return isOut ? waterOutLeftUpTile : waterLeftUpTile;
+                return isOut ? tileSet.waterOutLeftUp : tileSet.waterLeftUp;
 
             case MovementDirection.LeftDown:
-                return isOut ? waterOutLeftDownTile : waterLeftDownTile;
+                return isOut ? tileSet.waterOutLeftDown : tileSet.waterLeftDown;
 
             case MovementDirection.Right:
-                return waterLeftTile;
+                return tileSet.waterLeft;
 
             case MovementDirection.RightUp:
-                return isOut ? waterOutRightUpTile : waterRightUpTile;
+                return isOut ? tileSet.waterOutRightUp : tileSet.waterRightUp;
 
             case MovementDirection.RightDown:
-                return isOut ? waterOutRightDownTile : waterRightDownTile;
+                return isOut ? tileSet.waterOutRightDown : tileSet.waterRightDown;
         }
 
-        return waterTile;
+        return tileSet.water;
     }
 
     private void CutWaterTile(Vector3Int position)

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac0e0f68fa993da498291856e7a9aff1, type: 3}
+  m_Name: Level1
+  m_EditorClassIdentifier: 
+  playerTrack: {fileID: 11400000, guid: 57c3cde2101608545bf6b1f0f3c19130, type: 2}
+  water: {fileID: 11400000, guid: dc93ffca87a0230409154f65eebb6540, type: 2}
+  waterLeft: {fileID: 11400000, guid: 43f67d55296fdb344875903428e37e6e, type: 2}
+  waterUp: {fileID: 11400000, guid: b916174f05a728541a861679fdac6a9c, type: 2}
+  waterRight: {fileID: 11400000, guid: bd68e697234f08442bf4bae63064aaec, type: 2}
+  waterDown: {fileID: 11400000, guid: 486e1e724bdd76345a1f9232fe19cf88, type: 2}
+  waterLeftUp: {fileID: 11400000, guid: 4b0e3cb4f4284024e8f1969a8e7171ea, type: 2}
+  waterLeftDown: {fileID: 11400000, guid: bff1898042c717d4dba005279684ec4d, type: 2}
+  waterRightUp: {fileID: 11400000, guid: 148258ee545f1e643bef83f4689c774f, type: 2}
+  waterRightDown: {fileID: 11400000, guid: 94fb7479229a8694d8baddd99b4c0515, type: 2}
+  waterOutLeftUp: {fileID: 11400000, guid: 0d5dc99ea057c604f893fe154e0a6782, type: 2}
+  waterOutLeftDown: {fileID: 11400000, guid: f76fab7c816f77541801709549cf8df2, type: 2}
+  waterOutRightUp: {fileID: 11400000, guid: f4e677d7d1cf65041b6ee4a1f2028d9d, type: 2}
+  waterOutRightDown: {fileID: 11400000, guid: fc09971e234660941a8624fd809479e9, type: 2}

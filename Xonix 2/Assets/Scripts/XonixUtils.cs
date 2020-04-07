@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 
 public static class XonixUtils
 {
@@ -42,6 +39,7 @@ public static class XonixUtils
         animator.SetFloat("Vertical", vertical);
         animator.SetFloat("Speed", speed);
     }
+
 
     public static MovementDirection[] GetDiagonalDirections(MovementDirection direction)
     {

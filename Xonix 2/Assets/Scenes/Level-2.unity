@@ -1441,23 +1441,7 @@ MonoBehaviour:
   groundTilemap: {fileID: 2045417629}
   waterTilemap: {fileID: 985260019}
   playerTrackTilemap: {fileID: 346014800}
-  playerTrackTile: {fileID: 11400000, guid: 57c3cde2101608545bf6b1f0f3c19130, type: 2}
-  waterTile: {fileID: 11400000, guid: e5bb652c37ccece46b3d629e6744ce77, type: 2}
-  waterUpTile: {fileID: 11400000, guid: 1cf32bbc24e194646ad43613871e105a, type: 2}
-  waterDownTile: {fileID: 11400000, guid: 890024b6c5c86d64fa01a16ae6700e08, type: 2}
-  waterLeftTile: {fileID: 11400000, guid: a5fec31f2ce22c741942d6d979b05d2c, type: 2}
-  waterLeftUpTile: {fileID: 11400000, guid: f5d6f91899ffd3e448867b6696bd7a60, type: 2}
-  waterLeftDownTile: {fileID: 11400000, guid: 4879d9ad013166e4fab73453ba87f0f0, type: 2}
-  waterOutLeftUpTile: {fileID: 11400000, guid: c2ae9a5e0cdbe4d40964936418b5b809, type: 2}
-  waterOutLeftDownTile: {fileID: 11400000, guid: df71fd7d17ec41847bac2756bcce9d0c,
-    type: 2}
-  waterRightTile: {fileID: 11400000, guid: 900b3c2fb8728c04a884a7c965c48e1f, type: 2}
-  waterRightUpTile: {fileID: 11400000, guid: eba754599ac2a784aa4b833a8c958cf1, type: 2}
-  waterRightDownTile: {fileID: 11400000, guid: da935c451118de84295f180e07005549, type: 2}
-  waterOutRightUpTile: {fileID: 11400000, guid: 898f73a4e4d62534cbcb6ca9760efde0,
-    type: 2}
-  waterOutRightDownTile: {fileID: 11400000, guid: fa2fc7e0fbbb97a4fbb51fade7a68c1b,
-    type: 2}
+  tileSet: {fileID: 11400000, guid: abec86d98ad208a4abee5371d550f22a, type: 2}
 --- !u!114 &981946428
 MonoBehaviour:
   m_ObjectHideFlags: 0
