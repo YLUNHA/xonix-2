@@ -136,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        UpdateAnimator();
+        XonixUtils.UpdateAnimator(animator, direction);
     }
 
     private Vector2 NextPosition()
@@ -184,37 +184,6 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
-
-    private void UpdateAnimator()
-    {
-        switch (direction)
-        {
-            case SwipeDirection.None:
-                SetAnimatorParams(0, 0, 0);
-                break;
-            case SwipeDirection.Up:
-                SetAnimatorParams(0, 1, 1);
-                break;
-            case SwipeDirection.Down:
-                SetAnimatorParams(0, -1, 1);
-                break;
-            case SwipeDirection.Left:
-                SetAnimatorParams(-1, 0, 1);
-                break;
-            case SwipeDirection.Right:
-                SetAnimatorParams(1, 0, 1);
-                break;
-        }
-    }
-
-    private void SetAnimatorParams(float horizontal, float vertical, float speed)
-    {
-        animator.SetFloat("Horizontal", horizontal);
-        animator.SetFloat("Vertical", vertical);
-        animator.SetFloat("Speed", speed);
-    }
-
-
     public static void DamagePlayer()
     {
         OnPlayerDamaged();
@@ -230,7 +199,7 @@ public class PlayerMovement : MonoBehaviour
         direction = SwipeDirection.None;
         transform.position = new Vector3(0, -11, 0);
 
-        UpdateAnimator();
+        XonixUtils.UpdateAnimator(animator, direction);
     }
 
 }

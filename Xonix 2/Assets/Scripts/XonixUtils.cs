@@ -3,9 +3,46 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 
 public static class XonixUtils
 {
+    public static void UpdateAnimator(Animator animator, MovementDirection direction)
+    {
+        switch (direction)
+        {
+            case MovementDirection.None:
+                SetAnimatorParams(animator, 0, 0, 0);
+                break;
+            case MovementDirection.Up:
+                SetAnimatorParams(animator, 0, 1, 1);
+                break;
+            case MovementDirection.Down:
+                SetAnimatorParams(animator, 0, -1, 1);
+                break;
+            case MovementDirection.Left:
+                SetAnimatorParams(animator, -1, 0, 1);
+                break;
+            case MovementDirection.Right:
+                SetAnimatorParams(animator, 1, 0, 1);
+                break;
+        }
+    }
+
+    public static void UpdateAnimator(Animator animator, SwipeDirection direction)
+    {
+        UpdateAnimator(
+            animator
+            , (MovementDirection)Enum.Parse(typeof(MovementDirection), direction.ToString()));
+    }
+
+    public static void SetAnimatorParams(Animator animator, float horizontal, float vertical, float speed)
+    {
+        animator.SetFloat("Horizontal", horizontal);
+        animator.SetFloat("Vertical", vertical);
+        animator.SetFloat("Speed", speed);
+    }
+
     public static MovementDirection[] GetDiagonalDirections(MovementDirection direction)
     {
         switch (direction)

@@ -36,30 +36,45 @@ public class EnemyMovement : MonoBehaviour
         else
         {
             UpdateMovement();
-            UpdateAnimator();
+            XonixUtils.UpdateAnimator(animator, direction);
         }
 
-        TryAtackPlayer();
+        if (!TryAtackPlayer())
+        {
+            TryAtackPlayerTrack();
+        }
     }
 
 
-    private void TryAtackPlayer()
+    private bool TryAtackPlayer()
+    {
+        RaycastHit2D raycastHit2D = Physics2D.BoxCast(transform.position, new Vector2(1, 1), 0f, new Vector2(), .6f);
+
+        if (raycastHit2D.collider != null && raycastHit2D.collider.gameObject.tag.Equals("Player"))
+        {
+            AtackAnimation();
+            PlayerMovement.DamagePlayer();
+            return true;
+        }
+
+        return false;
+    }
+
+    private bool TryAtackPlayerTrack()
     {
         if (tilemapUtil.TryAtackPlayerTrack(transform.position))
         {
-            // TODO: Some animation
+            AtackAnimation();
+            return true;
         }
-        else
-        {
-            RaycastHit2D raycastHit2D = Physics2D.BoxCast(transform.position, new Vector2(1, 1), 0f, new Vector2(), .6f);
 
-            if (raycastHit2D.collider != null && raycastHit2D.collider.gameObject.tag.Equals("Player"))
-            {
-                PlayerMovement.DamagePlayer();
-            }
-        }
+        return false;
     }
 
+    private void AtackAnimation()
+    {
+        // TODO
+    }
 
     private bool CanMove()
     {
@@ -98,9 +113,9 @@ public class EnemyMovement : MonoBehaviour
 
     }
 
-    private Vector3 GetNextMovement(MovementDirection direc)
+    private Vector3 GetNextMovement(MovementDirection di)
     {
-        foreach (var diagonalD in XonixUtils.GetDiagonalDirections(direc))
+        foreach (var diagonalD in XonixUtils.GetDiagonalDirections(di))
         {
             if (tilemapUtil.CanMove(NextDiagonalMovement(diagonalD, transform.position), characterType))
             {
@@ -139,35 +154,5 @@ public class EnemyMovement : MonoBehaviour
         }
 
         return pos;
-    }
-
-
-    private void UpdateAnimator()
-    {
-        switch (direction)
-        {
-            case MovementDirection.None:
-                SetAnimatorParams(0, 0, 0);
-                break;
-            case MovementDirection.Up:
-                SetAnimatorParams(0, 1, 1);
-                break;
-            case MovementDirection.Down:
-                SetAnimatorParams(0, -1, 1);
-                break;
-            case MovementDirection.Left:
-                SetAnimatorParams(-1, 0, 1);
-                break;
-            case MovementDirection.Right:
-                SetAnimatorParams(1, 0, 1);
-                break;
-        }
-    }
-
-    private void SetAnimatorParams(float horizontal, float vertical, float speed)
-    {
-        animator.SetFloat("Horizontal", horizontal);
-        animator.SetFloat("Vertical", vertical);
-        animator.SetFloat("Speed", speed);
     }
 }
