@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 173015235}
   - component: {fileID: 173015234}
   - component: {fileID: 173015236}
+  - component: {fileID: 173015233}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -222,6 +223,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &173015233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 173015232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: baa00f05335ff2e4295aba1ffcfed174, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameController: {fileID: 173015234}
 --- !u!114 &173015234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -235,8 +249,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundController: {fileID: 1307301243}
-  playerMovement: {fileID: 2064731077}
-  tilemapUtil: {fileID: 173015236}
 --- !u!4 &173015235
 Transform:
   m_ObjectHideFlags: 0
@@ -665,6 +677,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6501017613373404430, guid: e2a81eb6532d3c640b1d1f7e895be6ed,
+        type: 3}
+      propertyPath: gameController
+      value: 
+      objectReference: {fileID: 173015234}
+    - target: {fileID: 6501017613373404430, guid: e2a81eb6532d3c640b1d1f7e895be6ed,
+        type: 3}
+      propertyPath: soundController
+      value: 
+      objectReference: {fileID: 1307301243}
+    - target: {fileID: 6501017613373404430, guid: e2a81eb6532d3c640b1d1f7e895be6ed,
+        type: 3}
+      propertyPath: tilemapUtil
+      value: 
+      objectReference: {fileID: 173015236}
+    - target: {fileID: 6501017613373404430, guid: e2a81eb6532d3c640b1d1f7e895be6ed,
+        type: 3}
+      propertyPath: playerMovement
+      value: 
+      objectReference: {fileID: 2064731077}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2a81eb6532d3c640b1d1f7e895be6ed, type: 3}
 --- !u!1 &527102501
